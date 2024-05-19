@@ -1,0 +1,27 @@
+{
+    "name": "gramtify",
+    "version": "0.0.1",
+    "description": "Spotify integration module for Telegram",
+    "main": "./public/index.js",
+    "type": "module",
+    "scripts": {
+        "start": "node ./public/index.js",
+        "draft": "node ./drafts/draft.js"
+    },
+    "keywords": [
+        "spotify",
+        "telegram"
+    ],
+    "author": "Nikita Boika",
+    "license": "ISC",
+    "dependencies": {
+        "@koa/cors": "^5.0.0",
+        "axios": "^1.6.8",
+        "cors": "^2.8.5",
+        "input": "^1.0.1",
+        "koa": "^2.15.3",
+        "koa-router": "^12.0.1",
+        "koajs-nocache": "^2.1.0",
+        "telegram": "^2.20.10"
+    }
+}

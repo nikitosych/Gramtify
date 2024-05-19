@@ -1,0 +1,17 @@
+{
+    "spotify": {
+        "CLIENT_ID": "",
+        "CLIENT_SECRET": ""
+    },
+    "telegram": {
+        "API_ID": 1234567,
+        "API_HASH": "",
+        "username": "enter_your_username"
+    },
+    "options": {
+        "TryRestoreOldBio": true,
+        "TryAppendBio": true,
+        "LogPlaybackState": true,
+        "PlaybackCheckInterval": 30000
+    }
+}
