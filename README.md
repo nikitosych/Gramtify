@@ -34,6 +34,8 @@ But you will need some data to work with the API, which should be entered in the
 1. Go to https://my.telegram.org/apps, login and create a new app, enter any name and description.
 2. API_ID and API_HASH will appear on the page immediately after the first step. Copy them and paste them into the appropriate fields in config.json.
 
+### Finally, just enter your credentials into `"phone"` and `"username"` fields. Ensure that your 
+
 # Troubleshooting
 
 This is my first Node JS app and my first repository on GitHub at all. I would be very happy to receive any edits, contributions, comments, ideas, as well as collaboratively fixing issues of Gramtify.
