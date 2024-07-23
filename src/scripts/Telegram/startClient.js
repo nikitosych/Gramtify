@@ -12,17 +12,20 @@ export default async function startClient() {
         const client = new TelegramClient(stringSession, API_ID, API_HASH, {
             connectionRetries: 10,
         });
+        console.log(
+            "\x1b[33m\x1b[1m%s\x1b[0m",
+            `\x1b[32m?${reset} ${boldWhite}Your phone number${reset} ${cyan}+48123456789${reset}`
+        );
+
+        if (!(await input.confirm("Confirm?"))) rej("incorrect_phone");
+
         await client.start({
-            phoneNumber: async () =>
-                await input.text("Please enter your number: "),
+            phoneNumber: config.telegram.phone,
             password: async () =>
                 await input.text("Please enter your password: "),
             phoneCode: async () =>
                 await input.text("Please enter the code you received: "),
-            onError: (err) => {
-                console.log(err);
-                rej(err);
-            },
+            onError: (err) => rej(err),
         });
         console.log("You should now be connected.");
         await client.sendMessage("me", { message: "Hello!" });

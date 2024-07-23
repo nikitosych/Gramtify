@@ -19,7 +19,16 @@ if (config.options.PlaybackCheckInterval < 5000)
     );
 
 (async () => {
-    const { client, savedSession } = await startClient();
+    try {
+        var { client, savedSession } = await startClient();
+    } catch (err) {
+        if (err === "incorrect_phone") {
+            console.error(
+                "Please, change your phone number in config.js and try again."
+            );
+            process.exit();
+        }
+    }
 
     if (fs.statSync("./src/scripts/Telegram/old_bio.txt").size <= 0) {
         fs.writeFileSync(

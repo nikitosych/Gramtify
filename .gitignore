@@ -2,3 +2,4 @@ NOTES.md
 /drafts
 /node_modules
 *.code-workspace
+config.json
